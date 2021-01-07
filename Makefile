@@ -1,3 +1,3 @@
 ready:
-	chmod +x ready.sh
-	./ready.sh
+	@chmod +x ready.sh
+	@./ready.sh
