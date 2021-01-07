@@ -7,16 +7,17 @@
 
 ### Recon
 
-  - **Enumeration**
-  
-      - [nmap](https://github.com/nmap/nmap)
-      - [gobuster](https://github.com/OJ/gobuster)
+   - **Enumeration**
+     - [nmap](https://github.com/nmap/nmap)
+     - [gobuster](https://github.com/OJ/gobuster)
 
   - **Secrets**
 
 ### Osint
 
 ### Phishing
+
+   - [gophish](https://github.com/gophish/gophish)
 
 ### WebSec
 
@@ -25,7 +26,14 @@
   - **CSRF**
 
   - **SQLi**
-
+    - [sqlmap](https://github.com/sqlmapproject/sqlmap)
+  
 ### Exploitation
 
 ### Privilege escalation
+
+### Miscellaneous
+
+  - **Wordlists**
+  
+      - [Seclists](https://github.com/danielmiessler/SecLists)
