@@ -14,6 +14,10 @@
 
   - **Secrets**
 
+### Osint
+
+### Phishing
+
 ### WebSec
 
   - **XSS**
