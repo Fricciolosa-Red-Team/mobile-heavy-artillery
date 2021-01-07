@@ -88,5 +88,9 @@ echo
 echo
 echo "================= PRIVILEGE ESCALATION ===================="
 echo
+# ================= MISCELLANEOUS ====================
+echo
+echo "================= MISCELLANEOUS ===================="
+echo
 
 cd $OLDDIR
