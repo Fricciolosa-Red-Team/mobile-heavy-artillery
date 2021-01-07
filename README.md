@@ -3,7 +3,17 @@
 
 ### Recon
 
+  - **Enumeration**
+
+  - **Secrets**
+
 ### WebSec
+
+  - **XSS**
+
+  - **CSRF**
+
+  - **SQLi**
 
 ### Exploitation
 
