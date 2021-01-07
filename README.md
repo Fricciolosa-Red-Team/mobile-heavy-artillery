@@ -8,6 +8,9 @@
 ### Recon
 
   - **Enumeration**
+  
+      - [nmap](https://github.com/nmap/nmap)
+      - [gobuster](https://github.com/OJ/gobuster)
 
   - **Secrets**
 
