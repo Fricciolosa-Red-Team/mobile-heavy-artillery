@@ -45,6 +45,13 @@ echo "[*] Deploying Mobile Heavy Artillery ... "
 OLDDIR=$(pwd)
 DIR="artillery"
 BLOCK="N"
+RECON="Y"
+OSINT="Y"
+PHISHING="Y"
+WEBSEC="Y"
+EXPLOITATION="Y"
+PRIVILEGE="Y"
+MISCELLANEOUS="Y"
 
 if [ -d "$DIR" ]; then
     echo -n "[!] Previous installation of Mobile Heavy Artillery found. Do you want to overwrite? (y/n)"
@@ -68,29 +75,78 @@ cd $DIR
 echo
 echo "================= RECON ===================="
 echo 
+echo -n "[!] Do you want to install reconaissance tools? (y/n)"
+read recon_decision
+if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decision" = "Yes" ] || [ "$recon_decision" = "yes" ]; then
+    echo "[*] Installing recon tools..."
+else
+    $RECON = "N"
+fi
 # ================= OSINT ====================
 echo
 echo "================= OSINT ===================="
 echo
+echo -n "[!] Do you want to install OSINT tools? (y/n)"
+read osint_decision
+if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
+    echo "[*] Installing OSINT tools..."
+else
+    $OSINT = "N"
+fi
 # ================= PHISHING ====================
 echo
 echo "================= PHISHING ===================="
 echo
+echo -n "[!] Do you want to install OSINT tools? (y/n)"
+read osint_decision
+if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
+    echo "[*] Installing OSINT tools..."
+else
+    $OSINT = "N"
+fi
 # ================= WEBSEC ====================
 echo
 echo "================= WEBSEC ===================="
 echo
+echo -n "[!] Do you want to install WEBSEC tools? (y/n)"
+read websec_decision
+if [ "$websec_decision" = "y" ] || [ "$websec_decision" = "Y" ] || [ "$websec_decision" = "Yes" ] || [ "$websec_decision" = "yes" ]; then
+    echo "[*] Installing WEBSEC tools..."
+else
+    $WEBSEC = "N"
+fi
 # ================= EXPLOITATION ====================
 echo
 echo "================= EXPLOITATION ===================="
 echo
+echo -n "[!] Do you want to install EXPLOITATION tools? (y/n)"
+read explo_decision
+if [ "$explo_decision" = "y" ] || [ "$explo_decision" = "Y" ] || [ "$explo_decision" = "Yes" ] || [ "$explo_decision" = "yes" ]; then
+    echo "[*] Installing EXPLOITATION tools..."
+else
+    $EXPLOITATION = "N"
+fi
 # ================= PRIVILEGE ESCALATION ====================
 echo
 echo "================= PRIVILEGE ESCALATION ===================="
 echo
+echo -n "[!] Do you want to install PRIVILEGE ESCALATION tools? (y/n)"
+read priv_decision
+if [ "$priv_decision" = "y" ] || [ "$priv_decision" = "Y" ] || [ "$priv_decision" = "Yes" ] || [ "$priv_decision" = "yes" ]; then
+    echo "[*] Installing PRIVILEGE ESCALATION tools..."
+else
+    $PRIVILEGE = "N"
+fi
 # ================= MISCELLANEOUS ====================
 echo
 echo "================= MISCELLANEOUS ===================="
 echo
+echo -n "[!] Do you want to install MISCELLANEOUS tools? (y/n)"
+read misc_decision
+if [ "$misc_decision" = "y" ] || [ "$misc_decision" = "Y" ] || [ "$misc_decision" = "Yes" ] || [ "$misc_decision" = "yes" ]; then
+    echo "[*] Installing MISCELLANEOUS tools..."
+else
+    $MISCELLANEOUS = "N"
+fi
 
 cd $OLDDIR
