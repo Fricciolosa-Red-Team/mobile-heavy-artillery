@@ -46,7 +46,7 @@ DIR="mobile-heavy-artillery"
 BLOCK="N"
 
 if [ -d "$DIR" ]; then
-    echo "[!] Previous installation of Mobile Heavy Artillery found. Do you want to overwrite? (y/n)"
+    echo -n "[!] Previous installation of Mobile Heavy Artillery found. Do you want to overwrite? (y/n)"
     read decision
     if [ "$decision" = "y" ] || [ "$decision" = "Y" ] || [ "$decision" = "Yes" ] || [ "$decision" = "yes" ]; then
         echo "[*] Overwriting..."
