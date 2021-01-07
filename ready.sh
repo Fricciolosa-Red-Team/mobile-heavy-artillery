@@ -42,7 +42,8 @@ echo "[*] Deploying Mobile Heavy Artillery ... "
 
 # ================= GLOBAL VARS, PREPROCESSING ====================
 
-DIR="mobile-heavy-artillery"
+OLDDIR=$(pwd)
+DIR="artillery"
 BLOCK="N"
 
 if [ -d "$DIR" ]; then
@@ -50,6 +51,7 @@ if [ -d "$DIR" ]; then
     read decision
     if [ "$decision" = "y" ] || [ "$decision" = "Y" ] || [ "$decision" = "Yes" ] || [ "$decision" = "yes" ]; then
         echo "[*] Overwriting..."
+        rm -rf $DIR
     else
         $BLOCK = "Y"
     fi
@@ -58,6 +60,9 @@ fi
 if [ "$BLOCK" = "Y" ]; then
     exit 1
 fi
+
+mkdir $DIR
+cd $DIR
 
 # ================= RECON ====================
 echo
@@ -83,3 +88,5 @@ echo
 echo
 echo "================= PRIVILEGE ESCALATION ===================="
 echo
+
+cd $OLDDIR
