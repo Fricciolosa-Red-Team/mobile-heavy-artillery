@@ -10,6 +10,8 @@
    - **Enumeration**
      - [nmap](https://github.com/nmap/nmap)
      - [gobuster](https://github.com/OJ/gobuster)
+     - [Sublist3r](https://github.com/aboul3la/Sublist3r)
+     - [massdns](https://github.com/blechschmidt/massdns)
 
   - **Secrets**
 
