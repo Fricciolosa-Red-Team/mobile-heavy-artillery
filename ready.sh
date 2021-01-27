@@ -85,6 +85,29 @@ echo -n "[!] Do you want to install reconaissance tools? (y/n)"
 read recon_decision
 if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decision" = "Yes" ] || [ "$recon_decision" = "yes" ]; then
     echo "[*] Installing recon tools..."
+
+    # NMAP
+    sudo apt install -y nmap
+    echo "[+] nmap installed!"
+    
+    # GOBUSTER
+    sudo apt install -y gobuster
+    echo "[+] gobuster installed!"
+
+    # SUBLIST3R
+    git clone https://github.com/aboul3la/Sublist3r.git
+    cd Sublist3r*
+    pip install -r requirements.txt
+    cd ~/$DIR
+    echo "[+] Sublist3r installed!"
+
+    # MASSDNS
+    git clone https://github.com/blechschmidt/massdns.git
+    cd ~/$DIR/massdns
+    make
+    cd ~/$DIR/
+    echo "[+] massdns installed!"
+
 else
     $RECON = "N"
 fi
