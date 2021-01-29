@@ -108,6 +108,14 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     cd ~/$DIR/
     echo "[+] massdns installed!"
 
+    # SCILLA
+    git clone https://github.com/edoardottt/scilla.git
+    cd ~/$DIR/scilla
+    go get
+    sudo make linux
+    cd ~/$DIR/
+    echo "[+] scilla installed!"
+
 else
     $RECON = "N"
 fi
