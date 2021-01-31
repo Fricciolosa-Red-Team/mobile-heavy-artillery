@@ -68,15 +68,16 @@ if [ "$BLOCK" = "Y" ]; then
     exit 1
 fi
 
+cd ~
 mkdir $DIR
 cd $DIR
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
+sudo apt -y update
+sudo apt -y upgrade
 sudo apt install wget
 sudo apt install curl
-sudo apt-get install -y python3-pip
-sudo apt-get install -y python-pip
+sudo apt install -y python3-pip
+sudo apt install -y python-pip
 sudo apt install golang-go
 # sudo apt install docker.io
 
@@ -84,7 +85,7 @@ sudo apt install golang-go
 echo
 echo "================= RECON ===================="
 echo 
-echo -n "[!] Do you want to install reconaissance tools? (y/n)"
+echo -n "[!] Do you want to install reconaissance tools? (y/n) "
 read recon_decision
 if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decision" = "Yes" ] || [ "$recon_decision" = "yes" ]; then
     echo "[*] Installing recon tools..."
@@ -131,7 +132,7 @@ cd ~/$DIR
 echo
 echo "================= OSINT ===================="
 echo
-echo -n "[!] Do you want to install OSINT tools? (y/n)"
+echo -n "[!] Do you want to install OSINT tools? (y/n) "
 read osint_decision
 if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
     echo "[*] Installing OSINT tools..."
@@ -169,7 +170,7 @@ cd ~/$DIR
 echo
 echo "================= PHISHING ===================="
 echo
-echo -n "[!] Do you want to install OSINT tools? (y/n)"
+echo -n "[!] Do you want to install OSINT tools? (y/n) "
 read osint_decision
 if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
     echo "[*] Installing PHISHING tools..."
@@ -193,7 +194,7 @@ cd ~/$DIR
 echo
 echo "================= WEBSEC ===================="
 echo
-echo -n "[!] Do you want to install WEBSEC tools? (y/n)"
+echo -n "[!] Do you want to install WEBSEC tools? (y/n) "
 read websec_decision
 if [ "$websec_decision" = "y" ] || [ "$websec_decision" = "Y" ] || [ "$websec_decision" = "Yes" ] || [ "$websec_decision" = "yes" ]; then
     echo "[*] Installing WEBSEC tools..."
@@ -228,7 +229,7 @@ cd ~/$DIR
 echo
 echo "================= EXPLOITATION ===================="
 echo
-echo -n "[!] Do you want to install EXPLOITATION tools? (y/n)"
+echo -n "[!] Do you want to install EXPLOITATION tools? (y/n) "
 read explo_decision
 if [ "$explo_decision" = "y" ] || [ "$explo_decision" = "Y" ] || [ "$explo_decision" = "Yes" ] || [ "$explo_decision" = "yes" ]; then
     echo "[*] Installing EXPLOITATION tools..."
@@ -250,7 +251,7 @@ cd ~/$DIR
 echo
 echo "================= PRIVILEGE ESCALATION ===================="
 echo
-echo -n "[!] Do you want to install PRIVILEGE ESCALATION tools? (y/n)"
+echo -n "[!] Do you want to install PRIVILEGE ESCALATION tools? (y/n) "
 read priv_decision
 if [ "$priv_decision" = "y" ] || [ "$priv_decision" = "Y" ] || [ "$priv_decision" = "Yes" ] || [ "$priv_decision" = "yes" ]; then
     echo "[*] Installing PRIVILEGE ESCALATION tools..."
@@ -274,7 +275,7 @@ cd ~/$DIR
 echo
 echo "================= MISCELLANEOUS ===================="
 echo
-echo -n "[!] Do you want to install MISCELLANEOUS tools? (y/n)"
+echo -n "[!] Do you want to install MISCELLANEOUS tools? (y/n) "
 read misc_decision
 if [ "$misc_decision" = "y" ] || [ "$misc_decision" = "Y" ] || [ "$misc_decision" = "Yes" ] || [ "$misc_decision" = "yes" ]; then
     echo "[*] Installing MISCELLANEOUS tools..."

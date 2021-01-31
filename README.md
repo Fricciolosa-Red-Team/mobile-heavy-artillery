@@ -2,7 +2,7 @@
 
 - `git clone https://github.com/Fricciolosa-Red-Team/mobile-heavy-artillery.git`
 - `cd mobile-heavy-artillery`
-- `sudo make ready`
+- `make ready`
 
 All the tools will be installed inside `~/artillery` folder.
 
