@@ -75,7 +75,6 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt install wget
 sudo apt install curl
-sudo apt-get install -y git
 sudo apt-get install -y python3-pip
 sudo apt-get install -y python-pip
 sudo apt install golang-go
