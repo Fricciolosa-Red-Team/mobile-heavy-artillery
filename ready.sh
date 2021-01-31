@@ -74,6 +74,7 @@ cd $DIR
 
 sudo apt -y update
 sudo apt -y upgrade
+sudo apt autoremove
 sudo apt install wget
 sudo apt install curl
 sudo apt install -y python3-pip
@@ -183,6 +184,7 @@ if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decis
     cd gophish
     wget https://github.com/gophish/gophish/releases/download/v0.11.0/gophish-v0.11.0-linux-64bit.zip
     unzip gophish*
+    sudo rm -rf gophish-v0.11.0*
     cd ..
 
 else
