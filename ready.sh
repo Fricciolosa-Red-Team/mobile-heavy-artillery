@@ -53,7 +53,7 @@ EXPLOITATION="Y"
 PRIVILEGE="Y"
 MISCELLANEOUS="Y"
 
-if [ -d "$DIR" ]; then
+if [ -d "~/$DIR" ]; then
     echo -n "[!] Previous installation of Mobile Heavy Artillery found. Do you want to overwrite? (y/n)"
     read decision
     if [ "$decision" = "y" ] || [ "$decision" = "Y" ] || [ "$decision" = "Yes" ] || [ "$decision" = "yes" ]; then
@@ -73,9 +73,13 @@ cd $DIR
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
+sudo apt install wget
+sudo apt install curl
 sudo apt-get install -y git
 sudo apt-get install -y python3-pip
 sudo apt-get install -y python-pip
+sudo apt install golang-go
+# sudo apt install docker.io
 
 # ================= RECON ====================
 echo
@@ -85,6 +89,9 @@ echo -n "[!] Do you want to install reconaissance tools? (y/n)"
 read recon_decision
 if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decision" = "Yes" ] || [ "$recon_decision" = "yes" ]; then
     echo "[*] Installing recon tools..."
+
+    mkdir recon
+    cd recon
 
     # NMAP
     sudo apt install -y nmap
@@ -96,29 +103,31 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
 
     # SUBLIST3R
     git clone https://github.com/aboul3la/Sublist3r.git
-    cd Sublist3r*
+    cd Sublist3r
     pip install -r requirements.txt
-    cd ~/$DIR
+    cd ..
     echo "[+] Sublist3r installed!"
 
     # MASSDNS
     git clone https://github.com/blechschmidt/massdns.git
-    cd ~/$DIR/massdns
+    cd massdns
     make
-    cd ~/$DIR/
+    cd ..
     echo "[+] massdns installed!"
 
     # SCILLA
     git clone https://github.com/edoardottt/scilla.git
-    cd ~/$DIR/scilla
+    cd scilla
     go get
     sudo make linux
-    cd ~/$DIR/
+    cd ..
     echo "[+] scilla installed!"
 
 else
     $RECON = "N"
 fi
+
+cd ~/$DIR
 # ================= OSINT ====================
 echo
 echo "================= OSINT ===================="
@@ -127,9 +136,36 @@ echo -n "[!] Do you want to install OSINT tools? (y/n)"
 read osint_decision
 if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
     echo "[*] Installing OSINT tools..."
+
+    mkdir osint
+    cd osint
+
+    # THE HARVESTER
+    git clone https://github.com/laramies/theHarvester
+    cd theHarvester
+    #docker build -t theharvester .
+    python3 -m pip install -r requirements/base.txt
+    cd ..
+
+    # MALTEGO
+    wget https://maltego-downloads.s3.us-east-2.amazonaws.com/linux/Maltego.v4.2.15.13632.deb
+    dpkg -i Maltego.*
+    sudo rm -rf Maltego.*
+
+    # METAGOOFIL
+    git clone https://github.com/laramies/metagoofil.git
+
+    # RECON-NG
+    git clone https://github.com/lanmaster53/recon-ng.git
+    cd recon-ng
+    pip install -r REQUIREMENTS
+    cd ..
+
 else
     $OSINT = "N"
 fi
+
+cd ~/$DIR
 # ================= PHISHING ====================
 echo
 echo "================= PHISHING ===================="
@@ -137,10 +173,23 @@ echo
 echo -n "[!] Do you want to install OSINT tools? (y/n)"
 read osint_decision
 if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
-    echo "[*] Installing OSINT tools..."
+    echo "[*] Installing PHISHING tools..."
+
+    mkdir phishing
+    cd phishing
+
+    # GOPHISH
+    mkdir gophish
+    cd gophish
+    wget https://github.com/gophish/gophish/releases/download/v0.11.0/gophish-v0.11.0-linux-64bit.zip
+    unzip gophish*
+    cd ..
+
 else
     $OSINT = "N"
 fi
+
+cd ~/$DIR
 # ================= WEBSEC ====================
 echo
 echo "================= WEBSEC ===================="
@@ -149,9 +198,33 @@ echo -n "[!] Do you want to install WEBSEC tools? (y/n)"
 read websec_decision
 if [ "$websec_decision" = "y" ] || [ "$websec_decision" = "Y" ] || [ "$websec_decision" = "Yes" ] || [ "$websec_decision" = "yes" ]; then
     echo "[*] Installing WEBSEC tools..."
+
+    mkdir websec
+    cd websec
+
+    # wfuzz
+    pip install wfuzz
+    
+    # XSStrike
+    git clone https://github.com/s0md3v/XSStrike.git
+    cd XSStrike
+    pip3 install -r requirements.txt
+    cd ..
+
+    # xss-payload-list
+    git clone https://github.com/payloadbox/xss-payload-list.git
+
+    # Bolt
+    git clone https://github.com/s0md3v/Bolt.git 
+    cd Bolt
+    pip3 install -r requirements.txt
+    cd ..
+
 else
     $WEBSEC = "N"
 fi
+
+cd ~/$DIR
 # ================= EXPLOITATION ====================
 echo
 echo "================= EXPLOITATION ===================="
@@ -160,9 +233,20 @@ echo -n "[!] Do you want to install EXPLOITATION tools? (y/n)"
 read explo_decision
 if [ "$explo_decision" = "y" ] || [ "$explo_decision" = "Y" ] || [ "$explo_decision" = "Yes" ] || [ "$explo_decision" = "yes" ]; then
     echo "[*] Installing EXPLOITATION tools..."
+
+    mkdir exploitation
+    cd exploitation
+
+    # METASPLOIT
+    curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb \
+    > msfinstall && chmod 755 msfinstall && ./msfinstall
+
+
 else
     $EXPLOITATION = "N"
 fi
+
+cd ~/$DIR
 # ================= PRIVILEGE ESCALATION ====================
 echo
 echo "================= PRIVILEGE ESCALATION ===================="
@@ -171,9 +255,22 @@ echo -n "[!] Do you want to install PRIVILEGE ESCALATION tools? (y/n)"
 read priv_decision
 if [ "$priv_decision" = "y" ] || [ "$priv_decision" = "Y" ] || [ "$priv_decision" = "Yes" ] || [ "$priv_decision" = "yes" ]; then
     echo "[*] Installing PRIVILEGE ESCALATION tools..."
+
+    mkdir privilege-escalation
+    cd privilege-escalation
+
+    # PRIVESCCHECK
+    git clone https://github.com/itm4n/PrivescCheck.git
+
+
+    # PE-LINUX
+    git clone https://github.com/WazeHell/PE-Linux.git
+
 else
     $PRIVILEGE = "N"
 fi
+
+cd ~/$DIR
 # ================= MISCELLANEOUS ====================
 echo
 echo "================= MISCELLANEOUS ===================="
@@ -182,6 +279,13 @@ echo -n "[!] Do you want to install MISCELLANEOUS tools? (y/n)"
 read misc_decision
 if [ "$misc_decision" = "y" ] || [ "$misc_decision" = "Y" ] || [ "$misc_decision" = "Yes" ] || [ "$misc_decision" = "yes" ]; then
     echo "[*] Installing MISCELLANEOUS tools..."
+
+    mkdir miscellaneous
+    cd miscellaneous
+
+    # SECLISTS
+    git clone https://github.com/danielmiessler/SecLists.git
+
 else
     $MISCELLANEOUS = "N"
 fi
