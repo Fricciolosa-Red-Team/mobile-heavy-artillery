@@ -149,7 +149,7 @@ if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decis
 
     # MALTEGO
     wget https://maltego-downloads.s3.us-east-2.amazonaws.com/linux/Maltego.v4.2.15.13632.deb
-    dpkg -i Maltego.*
+    sudo dpkg -i Maltego.*
     sudo rm -rf Maltego.*
 
     # METAGOOFIL
