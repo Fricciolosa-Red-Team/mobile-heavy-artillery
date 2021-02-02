@@ -19,6 +19,7 @@ All the tools will be installed inside `~/artillery` folder.
      - [scilla](https://github.com/edoardottt/scilla)
 
   - **Secrets**
+     - [SecretFinder](https://github.com/m4ll0k/SecretFinder)
 
 ### Osint
 

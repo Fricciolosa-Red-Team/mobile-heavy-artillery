@@ -1,6 +1,6 @@
 ready:
-	@chmod +x ready.sh
-	@./ready.sh
+	@chmod +x artillery.sh
+	@./artillery.sh
 
 retreat:
 	@sudo rm -rf ~/artillery

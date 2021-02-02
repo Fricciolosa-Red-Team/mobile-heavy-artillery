@@ -124,6 +124,13 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     cd ..
     echo "[+] scilla installed!"
 
+    # SECRETFINDER
+    git clone https://github.com/m4ll0k/SecretFinder.git secretfinder
+    cd secretfinder
+    pip install -r requirements.txt
+    cd ..
+    echo "[+] SecretFinder installed!"
+
 else
     $RECON = "N"
 fi
