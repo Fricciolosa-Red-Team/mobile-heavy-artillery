@@ -135,6 +135,18 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     sudo apt install -y hydra hydra-gtk
     echo "[+] Hydra installed!"
 
+    # JOHN THE RIPPER
+    sudo apt install -y john
+    echo "[+] John The Ripper installed!"
+
+    # C-JWT-CRACKER
+    sudo apt install -y libssl-dev
+    git clone https://github.com/brendan-rius/c-jwt-cracker.git
+    cd c-jwt-cracker
+    make
+    cd ..
+    echo "[+] c-jwt-cracker installed!"
+
 else
     $RECON = "N"
 fi

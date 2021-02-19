@@ -7,5 +7,6 @@ retreat:
 	@sudo apt purge nmap
 	@sudo apt purge gobuster
 	@sudo apt purge hydra hydra-gtk
+	@sudo apt purge john
 	@sudo apt autoremove
 	@sudo apt clean

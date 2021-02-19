@@ -17,10 +17,12 @@ All the tools will be installed inside `~/artillery` folder.
      - [Sublist3r](https://github.com/aboul3la/Sublist3r)
      - [massdns](https://github.com/blechschmidt/massdns)
      - [scilla](https://github.com/edoardottt/scilla)
-     - [hydra](https://github.com/vanhauser-thc/thc-hydra)
 
-  - **Secrets**
+  - **Secrets & Cracking**
      - [SecretFinder](https://github.com/m4ll0k/SecretFinder)
+     - [hydra](https://github.com/vanhauser-thc/thc-hydra)
+     - [John the ripper](https://www.openwall.com/john/)
+     - [c-jwt-cracker](https://github.com/brendan-rius/c-jwt-cracker)
 
 ### Osint
 
