@@ -8,5 +8,6 @@ retreat:
 	@sudo apt purge gobuster
 	@sudo apt purge hydra hydra-gtk
 	@sudo apt purge john
+	@sudo apt purge hashcat
 	@sudo apt autoremove
 	@sudo apt clean

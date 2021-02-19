@@ -23,6 +23,7 @@ All the tools will be installed inside `~/artillery` folder.
      - [hydra](https://github.com/vanhauser-thc/thc-hydra)
      - [John the ripper](https://www.openwall.com/john/)
      - [c-jwt-cracker](https://github.com/brendan-rius/c-jwt-cracker)
+     - [hashcat](https://hashcat.net/hashcat/)
 
 ### Osint
 

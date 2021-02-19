@@ -147,6 +147,10 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     cd ..
     echo "[+] c-jwt-cracker installed!"
 
+    # HASHCAT
+    sudo apt install -y hashcat
+    echo "[+] Hashcat installed!"
+
 else
     $RECON = "N"
 fi
