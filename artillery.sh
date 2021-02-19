@@ -131,6 +131,10 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     cd ..
     echo "[+] SecretFinder installed!"
 
+    # HYDRA
+    sudo apt install -y hydra hydra-gtk
+    echo "[+] Hydra installed!"
+
 else
     $RECON = "N"
 fi

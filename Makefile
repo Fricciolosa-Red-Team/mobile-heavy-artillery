@@ -6,5 +6,6 @@ retreat:
 	@sudo rm -rf ~/artillery
 	@sudo apt purge nmap
 	@sudo apt purge gobuster
+	@sudo apt purge hydra hydra-gtk
 	@sudo apt autoremove
 	@sudo apt clean
