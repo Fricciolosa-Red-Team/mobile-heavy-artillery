@@ -86,7 +86,7 @@ sudo apt install golang-go
 echo
 echo "================= RECON ===================="
 echo 
-echo -n "[!] Do you want to install reconaissance tools? (y/n) "
+echo -n "[!] Do you want to install RECON tools? (y/n) "
 read recon_decision
 if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decision" = "Yes" ] || [ "$recon_decision" = "yes" ]; then
     echo "[*] Installing recon tools..."
@@ -198,7 +198,7 @@ cd ~/$DIR
 echo
 echo "================= PHISHING ===================="
 echo
-echo -n "[!] Do you want to install OSINT tools? (y/n) "
+echo -n "[!] Do you want to install PHISHING tools? (y/n) "
 read osint_decision
 if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
     echo "[*] Installing PHISHING tools..."
