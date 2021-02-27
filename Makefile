@@ -4,10 +4,10 @@ ready:
 
 retreat:
 	@sudo rm -rf ~/artillery
-	@sudo apt purge nmap
-	@sudo apt purge gobuster
-	@sudo apt purge hydra hydra-gtk
-	@sudo apt purge john
-	@sudo apt purge hashcat
-	@sudo apt autoremove
+	@sudo apt purge -y nmap
+	@sudo apt purge -y gobuster
+	@sudo apt purge -y hydra hydra-gtk
+	@sudo apt purge -y john
+	@sudo apt purge -y hashcat
+	@sudo apt -y autoremove
 	@sudo apt clean
