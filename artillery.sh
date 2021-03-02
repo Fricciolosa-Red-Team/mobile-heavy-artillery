@@ -295,6 +295,12 @@ if [ "$priv_decision" = "y" ] || [ "$priv_decision" = "Y" ] || [ "$priv_decision
     # PE-LINUX
     git clone https://github.com/WazeHell/PE-Linux.git
 
+    # TRAITOR
+    git clone https://github.com/liamg/traitor.git
+    cd traitor
+    make build
+    cd ..
+
 else
     $PRIVILEGE = "N"
 fi

@@ -61,6 +61,7 @@ All the tools will be installed inside `~/artillery` folder.
 
   - **Linux**
       - [PE-Linux](https://github.com/WazeHell/PE-Linux)
+      - [traitor](https://github.com/liamg/traitor)
 
 ### Miscellaneous
 
