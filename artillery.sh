@@ -131,6 +131,9 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     cd ..
     echo "[+] SecretFinder installed!"
 
+    # GITJACKER
+    curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash
+
     # HYDRA
     sudo apt install -y hydra hydra-gtk
     echo "[+] Hydra installed!"
