@@ -21,6 +21,7 @@ All the tools will be installed inside `~/artillery` folder.
   - **Secrets & Cracking**
      - [SecretFinder](https://github.com/m4ll0k/SecretFinder)
      - [gitjacker](https://github.com/liamg/gitjacker)
+     - [GitDorker](https://github.com/obheda12/GitDorker)
      - [hydra](https://github.com/vanhauser-thc/thc-hydra)
      - [John the ripper](https://www.openwall.com/john/)
      - [c-jwt-cracker](https://github.com/brendan-rius/c-jwt-cracker)

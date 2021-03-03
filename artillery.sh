@@ -134,6 +134,13 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     # GITJACKER
     curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash
 
+    # GITDORKER
+    git clone https://github.com/obheda12/GitDorker.git
+    cd GitDorker
+    pip3 install -r requirements.txt
+    cd ..
+    echo "[+] GitDorker installed!" 
+
     # HYDRA
     sudo apt install -y hydra hydra-gtk
     echo "[+] Hydra installed!"
