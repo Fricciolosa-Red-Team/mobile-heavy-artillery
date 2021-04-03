@@ -82,6 +82,8 @@ sudo apt install -y python-pip
 sudo apt install golang-go
 # sudo apt install docker.io
 
+export GOPATH=$(go env GOPATH)
+
 # ================= RECON ====================
 echo
 echo "================= RECON ===================="
@@ -133,18 +135,22 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
 
     # ASSETFINDER
     go get -u github.com/tomnomnom/assetfinder
+    sudo cp $GOPATH/bin/assetfinder /usr/bin
     echo "[+] AssetFinder installed!"
 
     # SUBFINDER
     GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+    sudo cp $GOPATH/bin/subfinder /usr/bin
     echo "[+] SubFinder installed!"
 
     # HTTPROBE
     go get -u github.com/tomnomnom/httprobe
+    sudo cp $GOPATH/bin/httprobe /usr/bin
     echo "[+] Httprobe installed!"
 
     # HAKRAWLER
     go get github.com/hakluke/hakrawler
+    sudo cp $GOPATH/bin/hakrawler /usr/bin
     echo "[+] Hakrawler installed!"
 
     # GITJACKER
