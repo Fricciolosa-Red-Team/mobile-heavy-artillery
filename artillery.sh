@@ -131,6 +131,22 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     cd ..
     echo "[+] SecretFinder installed!"
 
+    # ASSETFINDER
+    go get -u github.com/tomnomnom/assetfinder
+    echo "[+] AssetFinder installed!"
+
+    # SUBFINDER
+    GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+    echo "[+] SubFinder installed!"
+
+    # HTTPROBE
+    go get -u github.com/tomnomnom/httprobe
+    echo "[+] Httprobe installed!"
+
+    # HAKRAWLER
+    go get github.com/hakluke/hakrawler
+    echo "[+] Hakrawler installed!"
+
     # GITJACKER
     curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash
 
