@@ -17,6 +17,10 @@ All the tools will be installed inside `~/artillery` folder.
      - [Sublist3r](https://github.com/aboul3la/Sublist3r)
      - [massdns](https://github.com/blechschmidt/massdns)
      - [scilla](https://github.com/edoardottt/scilla)
+     - [assetfinder](github.com/tomnomnom/assetfinder)
+     - [subfinder](github.com/projectdiscovery/subfinder)
+     - [httprobe](github.com/tomnomnom/httprobe)
+     - [hakrawler](github.com/hakluke/hakrawler)
 
   - **Secrets & Cracking**
      - [SecretFinder](https://github.com/m4ll0k/SecretFinder)
