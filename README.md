@@ -1,6 +1,6 @@
 # Mobile Heavy Artillery
 
-## Ready, Aim, Fire
+## 🔥Ready, Aim, Fire🔥
 
 - `git clone https://github.com/Fricciolosa-Red-Team/mobile-heavy-artillery.git`
 - `cd mobile-heavy-artillery`
