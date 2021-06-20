@@ -126,6 +126,14 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     cd ..
     echo "[+] scilla installed!"
 
+    # CARIDDI
+    git clone https://github.com/edoardottt/cariddi.git
+    cd cariddi
+    go get
+    sudo make linux
+    cd ..
+    echo "[+] cariddi installed!"
+
     # SECRETFINDER
     git clone https://github.com/m4ll0k/SecretFinder.git secretfinder
     cd secretfinder
@@ -323,7 +331,6 @@ if [ "$priv_decision" = "y" ] || [ "$priv_decision" = "Y" ] || [ "$priv_decision
     # PRIVESCCHECK
     git clone https://github.com/itm4n/PrivescCheck.git
 
-
     # PE-LINUX
     git clone https://github.com/WazeHell/PE-Linux.git
 
@@ -331,6 +338,12 @@ if [ "$priv_decision" = "y" ] || [ "$priv_decision" = "Y" ] || [ "$priv_decision
     git clone https://github.com/liamg/traitor.git
     cd traitor
     make build
+    cd ..
+
+    # LINPEAS
+    mkdir linpeas
+    cd linpeas
+    wget https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh
     cd ..
 
 else
