@@ -50,6 +50,7 @@ All the tools will be installed inside `~/artillery` folder.
 ### WebSec
 
   - [wfuzz](https://github.com/xmendez/wfuzz)
+  - [nikto](https://github.com/sullo/nikto)
 
   - **XSS**
       - [XSStrike](https://github.com/s0md3v/XSStrike)

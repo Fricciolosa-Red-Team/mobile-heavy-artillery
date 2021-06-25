@@ -75,11 +75,11 @@ cd $DIR
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt autoremove
-sudo apt install wget
-sudo apt install curl
+sudo apt install -y wget
+sudo apt install -y curl
 sudo apt install -y python3-pip
 sudo apt install -y python-pip
-sudo apt install golang-go
+sudo apt install -y golang-go
 # sudo apt install docker.io
 
 export GOPATH=$(go env GOPATH)
@@ -293,6 +293,9 @@ if [ "$websec_decision" = "y" ] || [ "$websec_decision" = "Y" ] || [ "$websec_de
 
     # wfuzz
     pip install wfuzz
+
+    # nikto
+    sudo apt install -y nikto
     
     # XSStrike
     git clone https://github.com/s0md3v/XSStrike.git
