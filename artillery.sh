@@ -161,6 +161,11 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     sudo cp $GOPATH/bin/hakrawler /usr/bin
     echo "[+] Hakrawler installed!"
 
+    # HTTPX
+    GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+    sudo cp $GOPATH/bin/httpx /usr/bin
+    echo "[+] httpx installed!"
+
     # GITJACKER
     curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash
 
