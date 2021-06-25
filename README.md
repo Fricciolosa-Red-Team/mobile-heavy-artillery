@@ -24,6 +24,7 @@ All the tools will be installed inside `~/artillery` folder.
      - [hakrawler](https://github.com/hakluke/hakrawler)
      - [httpx](https://github.com/projectdiscovery/httpx)
      - [naabu](https://github.com/projectdiscovery/naabu)
+     - [nuclei](https://github.com/projectdiscovery/nuclei)
 
   - **Secrets & Cracking**
      - [SecretFinder](https://github.com/m4ll0k/SecretFinder)
