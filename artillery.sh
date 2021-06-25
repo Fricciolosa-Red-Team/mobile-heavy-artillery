@@ -166,6 +166,11 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     sudo cp $GOPATH/bin/httpx /usr/bin
     echo "[+] httpx installed!"
 
+    # NAABU
+    GO111MODULE=on go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
+    sudo cp $GOPATH/bin/naabu /usr/bin
+    echo "[+] naabu installed!"
+
     # GITJACKER
     curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash
 
