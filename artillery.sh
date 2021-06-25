@@ -176,6 +176,11 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     sudo cp $GOPATH/bin/nuclei /usr/bin
     echo "[+] nuclei installed!"
 
+    # WAYBACKURLS
+    go get github.com/tomnomnom/waybackurls
+    sudo cp $GOPATH/bin/waybackurls /usr/bin
+    echo "[+] waybackurls installed!"
+
     # GITJACKER
     curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash
 

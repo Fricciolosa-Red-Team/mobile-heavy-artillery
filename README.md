@@ -25,6 +25,7 @@ All the tools will be installed inside `~/artillery` folder.
      - [httpx](https://github.com/projectdiscovery/httpx)
      - [naabu](https://github.com/projectdiscovery/naabu)
      - [nuclei](https://github.com/projectdiscovery/nuclei)
+     - [waybackurls](https://github.com/tomnomnom/waybackurls)
 
   - **Secrets & Cracking**
      - [SecretFinder](https://github.com/m4ll0k/SecretFinder)
