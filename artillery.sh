@@ -22,6 +22,30 @@
 #   @Author:      Fricciolosa Red Team
 #
 
+# ================= GLOBAL VARS, PREPROCESSING ====================
+
+OLDDIR=$(pwd)
+DIR="artillery"
+BLOCK="N"
+RECON="Y"
+OSINT="Y"
+PHISHING="Y"
+WEBSEC="Y"
+EXPLOITATION="Y"
+PRIVILEGE="Y"
+MISCELLANEOUS="Y"
+HEADER = "\033[95m"
+OKBLUE = "\033[94m"
+OKCYAN = "\033[96m"
+OKGREEN = "\033[92m"
+WARNING = "\033[93m"
+FAIL = "\033[91m"
+ENDC = "\033[0m"
+BOLD = "\033[1m"
+UNDERLINE = "\033[4m"
+
+# ======================= INTRO BANNER ==========================
+
 echo " __  __       _     _ _        _   _"                        
 echo "|  \/  | ___ | |__ (_) | ___  | | | | ___  __ ___   ___   _ "
 echo "| |\/| |/ _ \| '_ \| | |/ _ \ | |_| |/ _ \/ _\` \ \ / / | | |"
@@ -40,18 +64,6 @@ echo "        https://github.com/fricciolosa-red-team/mobile-heavy-artillery"
 echo ""
 echo "[*] Deploying Mobile Heavy Artillery ... "
 
-# ================= GLOBAL VARS, PREPROCESSING ====================
-
-OLDDIR=$(pwd)
-DIR="artillery"
-BLOCK="N"
-RECON="Y"
-OSINT="Y"
-PHISHING="Y"
-WEBSEC="Y"
-EXPLOITATION="Y"
-PRIVILEGE="Y"
-MISCELLANEOUS="Y"
 
 if [ -d "~/$DIR" ]; then
     echo -n "[!] Previous installation of Mobile Heavy Artillery found. Do you want to overwrite? (y/n)"
