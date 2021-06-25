@@ -54,6 +54,7 @@ All the tools will be installed inside `~/artillery` folder.
   - **XSS**
       - [XSStrike](https://github.com/s0md3v/XSStrike)
       - [xss-payload-list](https://github.com/payloadbox/xss-payload-list)
+      - [dalfox](https://github.com/hahwul/dalfox)
 
   - **CSRF**
       - [Bolt](https://github.com/s0md3v/Bolt)

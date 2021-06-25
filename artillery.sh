@@ -303,6 +303,11 @@ if [ "$websec_decision" = "y" ] || [ "$websec_decision" = "Y" ] || [ "$websec_de
     # xss-payload-list
     git clone https://github.com/payloadbox/xss-payload-list.git
 
+    # DALFOX
+    GO111MODULE=on go get -v github.com/hahwul/dalfox/v2
+    sudo cp $GOPATH/bin/dalfox /usr/bin
+    echo "[+] dalfox installed!"
+
     # Bolt
     git clone https://github.com/s0md3v/Bolt.git 
     cd Bolt
