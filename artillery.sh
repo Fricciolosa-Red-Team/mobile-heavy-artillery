@@ -55,8 +55,6 @@ echo -e "\033[31m         https://github.com/fricciolosa-red-team/mobile-heavy-a
 echo -e "\033[0m"
 echo -e "[ * ] Deploying Mobile Heavy Artillery ... "
 
-exit
-
 if [ -d "~/$DIR" ]; then
     echo -n "[ ! ] Previous installation of Mobile Heavy Artillery found. Do you want to overwrite? (y/n)"
     read decision
