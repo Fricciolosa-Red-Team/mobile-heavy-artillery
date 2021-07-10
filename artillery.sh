@@ -58,10 +58,10 @@ echo -e "[ * ] Deploying Mobile Heavy Artillery ... "
 exit
 
 if [ -d "~/$DIR" ]; then
-    echo -n "[!] Previous installation of Mobile Heavy Artillery found. Do you want to overwrite? (y/n)"
+    echo -n "[ ! ] Previous installation of Mobile Heavy Artillery found. Do you want to overwrite? (y/n)"
     read decision
     if [ "$decision" = "y" ] || [ "$decision" = "Y" ] || [ "$decision" = "Yes" ] || [ "$decision" = "yes" ]; then
-        echo "[*] Overwriting..."
+        echo "[ * ] Overwriting..."
         rm -rf $DIR
     else
         $BLOCK = "Y"
@@ -92,35 +92,35 @@ export GOPATH=$(go env GOPATH)
 echo
 echo "================= RECON ===================="
 echo 
-echo -n "[!] Do you want to install RECON tools? (y/n) "
+echo -n "[ ! ] Do you want to install RECON tools? (y/n) "
 read recon_decision
 if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decision" = "Yes" ] || [ "$recon_decision" = "yes" ]; then
-    echo "[*] Installing recon tools..."
+    echo "[ * ] Installing recon tools..."
 
     mkdir recon
     cd recon
 
     # NMAP
     sudo apt install -y nmap
-    echo "[+] nmap installed!"
+    echo "[ + ] nmap installed!"
     
     # GOBUSTER
     sudo apt install -y gobuster
-    echo "[+] gobuster installed!"
+    echo "[ + ] gobuster installed!"
 
     # SUBLIST3R
     git clone https://github.com/aboul3la/Sublist3r.git
     cd Sublist3r
     pip install -r requirements.txt
     cd ..
-    echo "[+] Sublist3r installed!"
+    echo "[ + ] Sublist3r installed!"
 
     # MASSDNS
     git clone https://github.com/blechschmidt/massdns.git
     cd massdns
     make
     cd ..
-    echo "[+] massdns installed!"
+    echo "[ + ] massdns installed!"
 
     # SCILLA
     git clone https://github.com/edoardottt/scilla.git
@@ -128,7 +128,7 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     go get
     sudo make linux
     cd ..
-    echo "[+] scilla installed!"
+    echo "[ + ] scilla installed!"
 
     # CARIDDI
     git clone https://github.com/edoardottt/cariddi.git
@@ -136,72 +136,73 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     go get
     sudo make linux
     cd ..
-    echo "[+] cariddi installed!"
+    echo "[ + ] cariddi installed!"
 
     # SECRETFINDER
     git clone https://github.com/m4ll0k/SecretFinder.git secretfinder
     cd secretfinder
     pip install -r requirements.txt
     cd ..
-    echo "[+] SecretFinder installed!"
+    echo "[ + ] SecretFinder installed!"
 
     # ASSETFINDER
     go get -u github.com/tomnomnom/assetfinder
     sudo cp $GOPATH/bin/assetfinder /usr/bin
-    echo "[+] AssetFinder installed!"
+    echo "[ + ] AssetFinder installed!"
 
     # SUBFINDER
     GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
     sudo cp $GOPATH/bin/subfinder /usr/bin
-    echo "[+] SubFinder installed!"
+    echo "[ + ] SubFinder installed!"
 
     # HTTPROBE
     go get -u github.com/tomnomnom/httprobe
     sudo cp $GOPATH/bin/httprobe /usr/bin
-    echo "[+] Httprobe installed!"
+    echo "[ + ] Httprobe installed!"
 
     # HAKRAWLER
     go get github.com/hakluke/hakrawler
     sudo cp $GOPATH/bin/hakrawler /usr/bin
-    echo "[+] Hakrawler installed!"
+    echo "[ + ] Hakrawler installed!"
 
     # HTTPX
     GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
     sudo cp $GOPATH/bin/httpx /usr/bin
-    echo "[+] httpx installed!"
+    echo "[ + ] httpx installed!"
 
     # NAABU
     GO111MODULE=on go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
     sudo cp $GOPATH/bin/naabu /usr/bin
-    echo "[+] naabu installed!"
+    echo "[ + ] naabu installed!"
 
     # NUCLEI
     GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
     sudo cp $GOPATH/bin/nuclei /usr/bin
-    echo "[+] nuclei installed!"
+    echo "[ + ] nuclei installed!"
 
     # WAYBACKURLS
     go get github.com/tomnomnom/waybackurls
     sudo cp $GOPATH/bin/waybackurls /usr/bin
-    echo "[+] waybackurls installed!"
+    echo "[ + ] waybackurls installed!"
 
     # GITJACKER
     curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash
+    echo "[ + ] GitJacker installed!"
 
     # GITDORKER
     git clone https://github.com/obheda12/GitDorker.git
     cd GitDorker
     pip3 install -r requirements.txt
     cd ..
-    echo "[+] GitDorker installed!" 
+    echo "[ + ] GitDorker installed!" 
 
     # HYDRA
     sudo apt install -y hydra hydra-gtk
-    echo "[+] Hydra installed!"
+    echo "[ + ] Hydra installed!"
 
     # JOHN THE RIPPER
     sudo apt install -y john
-    echo "[+] John The Ripper installed!"
+    echo "[ + ] John The Ripper installed!"
 
     # C-JWT-CRACKER
     sudo apt install -y libssl-dev
@@ -209,11 +210,11 @@ if [ "$recon_decision" = "y" ] || [ "$recon_decision" = "Y" ] || [ "$recon_decis
     cd c-jwt-cracker
     make
     cd ..
-    echo "[+] c-jwt-cracker installed!"
+    echo "[ + ] c-jwt-cracker installed!"
 
     # HASHCAT
     sudo apt install -y hashcat
-    echo "[+] Hashcat installed!"
+    echo "[ + ] Hashcat installed!"
 
 else
     $RECON = "N"
@@ -224,10 +225,10 @@ cd ~/$DIR
 echo
 echo "================= OSINT ===================="
 echo
-echo -n "[!] Do you want to install OSINT tools? (y/n) "
+echo -n "[ ! ] Do you want to install OSINT tools? (y/n) "
 read osint_decision
 if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
-    echo "[*] Installing OSINT tools..."
+    echo "[ * ] Installing OSINT tools..."
 
     mkdir osint
     cd osint
@@ -262,10 +263,10 @@ cd ~/$DIR
 echo
 echo "================= PHISHING ===================="
 echo
-echo -n "[!] Do you want to install PHISHING tools? (y/n) "
+echo -n "[ ! ] Do you want to install PHISHING tools? (y/n) "
 read osint_decision
 if [ "$osint_decision" = "y" ] || [ "$osint_decision" = "Y" ] || [ "$osint_decision" = "Yes" ] || [ "$osint_decision" = "yes" ]; then
-    echo "[*] Installing PHISHING tools..."
+    echo "[ * ] Installing PHISHING tools..."
 
     mkdir phishing
     cd phishing
@@ -287,10 +288,10 @@ cd ~/$DIR
 echo
 echo "================= WEBSEC ===================="
 echo
-echo -n "[!] Do you want to install WEBSEC tools? (y/n) "
+echo -n "[ ! ] Do you want to install WEBSEC tools? (y/n) "
 read websec_decision
 if [ "$websec_decision" = "y" ] || [ "$websec_decision" = "Y" ] || [ "$websec_decision" = "Yes" ] || [ "$websec_decision" = "yes" ]; then
-    echo "[*] Installing WEBSEC tools..."
+    echo "[ * ] Installing WEBSEC tools..."
 
     mkdir websec
     cd websec
@@ -313,7 +314,7 @@ if [ "$websec_decision" = "y" ] || [ "$websec_decision" = "Y" ] || [ "$websec_de
     # DALFOX
     GO111MODULE=on go get -v github.com/hahwul/dalfox/v2
     sudo cp $GOPATH/bin/dalfox /usr/bin
-    echo "[+] dalfox installed!"
+    echo "[ + ] dalfox installed!"
 
     # Bolt
     git clone https://github.com/s0md3v/Bolt.git 
@@ -330,10 +331,10 @@ cd ~/$DIR
 echo
 echo "================= EXPLOITATION ===================="
 echo
-echo -n "[!] Do you want to install EXPLOITATION tools? (y/n) "
+echo -n "[ ! ] Do you want to install EXPLOITATION tools? (y/n) "
 read explo_decision
 if [ "$explo_decision" = "y" ] || [ "$explo_decision" = "Y" ] || [ "$explo_decision" = "Yes" ] || [ "$explo_decision" = "yes" ]; then
-    echo "[*] Installing EXPLOITATION tools..."
+    echo "[ * ] Installing EXPLOITATION tools..."
 
     mkdir exploitation
     cd exploitation
@@ -352,10 +353,10 @@ cd ~/$DIR
 echo
 echo "================= PRIVILEGE ESCALATION ===================="
 echo
-echo -n "[!] Do you want to install PRIVILEGE ESCALATION tools? (y/n) "
+echo -n "[ ! ] Do you want to install PRIVILEGE ESCALATION tools? (y/n) "
 read priv_decision
 if [ "$priv_decision" = "y" ] || [ "$priv_decision" = "Y" ] || [ "$priv_decision" = "Yes" ] || [ "$priv_decision" = "yes" ]; then
-    echo "[*] Installing PRIVILEGE ESCALATION tools..."
+    echo "[ * ] Installing PRIVILEGE ESCALATION tools..."
 
     mkdir privilege-escalation
     cd privilege-escalation
@@ -387,10 +388,10 @@ cd ~/$DIR
 echo
 echo "================= MISCELLANEOUS ===================="
 echo
-echo -n "[!] Do you want to install MISCELLANEOUS tools? (y/n) "
+echo -n "[ ! ] Do you want to install MISCELLANEOUS tools? (y/n) "
 read misc_decision
 if [ "$misc_decision" = "y" ] || [ "$misc_decision" = "Y" ] || [ "$misc_decision" = "Yes" ] || [ "$misc_decision" = "yes" ]; then
-    echo "[*] Installing MISCELLANEOUS tools..."
+    echo "[ * ] Installing MISCELLANEOUS tools..."
 
     mkdir miscellaneous
     cd miscellaneous
