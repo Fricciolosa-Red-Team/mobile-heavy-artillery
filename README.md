@@ -86,7 +86,7 @@ All the tools will be installed inside `~/artillery` folder.
 
 ## Contributing
 
-If you want to propose a change / add new tools, just open an [issue](https://github.com/Fricciolosa-Red-Team/mobile-heavy-artillery/issues).
+If you want to propose a change or just add new tools, just open an [issue](https://github.com/Fricciolosa-Red-Team/mobile-heavy-artillery/issues).
 
 ## License
 
