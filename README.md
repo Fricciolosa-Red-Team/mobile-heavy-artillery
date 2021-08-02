@@ -83,3 +83,11 @@ All the tools will be installed inside `~/artillery` folder.
   - **Wordlists**
   
       - [Seclists](https://github.com/danielmiessler/SecLists)
+
+## Contributing
+
+If you want to propose a change / add new tools, just open an [issue](https://github.com/Fricciolosa-Red-Team/mobile-heavy-artillery/issues).
+
+## License
+
+This repository is under [GNU General Public License v3.0](https://github.com/Fricciolosa-Red-Team/mobile-heavy-artillery/blob/main/LICENSE).
