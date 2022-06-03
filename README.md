@@ -90,4 +90,4 @@ If you want to propose a change or just add new tools, open an [issue](https://g
 
 ## License 📜
 
-This repository is under [GNU General Public License v3.0](https://github.com/Fricciolosa-Red-Team/mobile-heavy-artillery/blob/main/LICENSE).
+This repository is under [MIT License](https://github.com/Fricciolosa-Red-Team/mobile-heavy-artillery/blob/main/LICENSE).
